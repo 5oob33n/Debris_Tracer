@@ -75,7 +75,7 @@ function draw() {
   }
 
   // 좌측 상단에 텍스트 추가
-  fill(240, 252, 3);
+  fill(26, 255, 0);
   textSize(20);
   textAlign(LEFT, TOP);
   text("The once pristine skies above Earth had become a haunting testament to humanity's neglect. \nSpace, once the final frontier of exploration and wonder, had transformed into a graveyard of abandoned satellites, \nspent rocket stages, and countless fragments of human ambition left adrift. \nThe warnings had been sounded, the alarms raised, \nbut they had fallen on deaf ears as humanity plunged deeper into its pursuit of progress, blinded by its own hubris. \nAs the debris continued to accumulate, \nlike a silent army amassing in the heavens, the consequences became increasingly dire. \nCommunication networks faltered, weather forecasts grew unreliable, \nand navigation systems faltered, leaving the world vulnerable to unseen dangers lurking beyond the atmosphere. \nAnd then, one fateful day, the inevitable occurred. \nA collision of catastrophic proportions sent shockwaves rippling through space, \ntriggering a chain reaction that reverberated back to Earth with devastating force. \nSatellites fell from the sky like shooting stars, \nraining debris down upon cities and continents below.", -800, -250);
