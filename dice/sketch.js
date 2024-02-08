@@ -28,7 +28,7 @@ function preload() {
   font = loadFont('HomadeTrial.ttf');
   starModels = loadModel('dice.obj', true);
   starUV = loadImage('diceimg.jpg');
-  backgroundMusic = loadSound('ambience.mp3');
+  backgroundMusic = loadSound('noisy.mp3');
 }
 
 function setup() {
