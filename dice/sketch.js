@@ -40,7 +40,7 @@ function setup() {
   textFont(font);
 
   backButton = createButton('Ignore');
-  backButton.position(40, 485);
+  backButton.position(40, 405);
   backButton.style('background-color', '#0a00bf'); 
   backButton.style('color', '#ff0051'); 
   backButton.style('font-family', 'HomadeTrial'); 
@@ -69,7 +69,7 @@ function draw() {
   background(0);
   let vol = mic.getLevel();
   
-  if (vol > 0.03) {
+  if (vol > 0.02) {
     display3DModels();
     drawLines();
   }
@@ -78,7 +78,7 @@ function draw() {
   fill(240, 252, 3);
   textSize(20);
   textAlign(LEFT, TOP);
-  text("Space debris refers to the tiny particles or waste generated from space activities, \nranging from thousands to millions in number and varying in size from millimeters to meters. \nWhy should we pay attention to these debris?\nThey are not immediately visible nor do they seem threatening to us. \nHowever, such space debris poses significant threats not only to space activities and exploration but also to Earth's environment. \nDebris resulting from collisions may not disintegrate upon entering Earth's atmosphere \nand can remain as small fragments in the atmosphere. \nThis not only threatens spacecraft and satellites \nbut also affects Earth's atmospheric chemistry, potentially containing hazardous chemicals. \nMoreover, space debris can fall into the atmosphere or oceans, \nimpacting Earth's ecosystems.", -800, -250);
+  text("Space debris, a shadowy menace looming beyond Earth's atmosphere, threatens \nnot only our celestial endeavors but also the delicate balance of our planet's ecosystems. \nWith debris ranging from defunct satellites to discarded rocket stages, \nthe risk of collisions poses an ominous threat to the biodiversity and ecological stability of Earth. \nEach collision adds to the growing cloud of debris encircling our planet, \npotentially disrupting vital ecological processes and exacerbating climate crises. \nMoreover, the proliferation of space debris could trigger a domino effect, \nleading to cascading environmental damage that reverberates throughout our biosphere.", -800, -250);
 
 }
 
@@ -91,7 +91,7 @@ function display3DModels() {
     translate(star.pos.x - width / 2, star.pos.y - height / 2, 0);
     rotateX(frameCount * 0.01);
     rotateY(frameCount * 0.01);
-    scale(0.85);
+    scale(0.65);
     texture(starUV); // Apply texture before the model
     model(starModels);
     pop();
