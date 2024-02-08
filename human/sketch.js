@@ -28,7 +28,7 @@ function preload() {
   font = loadFont('HomadeTrial.ttf');
   starModels = loadModel('Soobeen2.obj', true);
   starUV = loadImage('Soobeen2.jpg');
-  backgroundMusic = loadSound('ambience.mp3');
+  backgroundMusic = loadSound('apocalypse.mp3');
 }
 
 function setup() {
@@ -40,7 +40,7 @@ function setup() {
   textFont(font);
 
   backButton = createButton('Ignore');
-  backButton.position(40, 485);
+  backButton.position(40, 555);
   backButton.style('background-color', '#0a00bf'); 
   backButton.style('color', '#ff0051'); 
   backButton.style('font-family', 'HomadeTrial'); 
@@ -78,7 +78,7 @@ function draw() {
   fill(240, 252, 3);
   textSize(20);
   textAlign(LEFT, TOP);
-  text("Space debris refers to the tiny particles or waste generated from space activities, \nranging from thousands to millions in number and varying in size from millimeters to meters. \nWhy should we pay attention to these debris?\nThey are not immediately visible nor do they seem threatening to us. \nHowever, such space debris poses significant threats not only to space activities and exploration but also to Earth's environment. \nDebris resulting from collisions may not disintegrate upon entering Earth's atmosphere \nand can remain as small fragments in the atmosphere. \nThis not only threatens spacecraft and satellites \nbut also affects Earth's atmospheric chemistry, potentially containing hazardous chemicals. \nMoreover, space debris can fall into the atmosphere or oceans, \nimpacting Earth's ecosystems.", -800, -250);
+  text("The once pristine skies above Earth had become a haunting testament to humanity's neglect. \nSpace, once the final frontier of exploration and wonder, had transformed into a graveyard of abandoned satellites, \nspent rocket stages, and countless fragments of human ambition left adrift. \nThe warnings had been sounded, the alarms raised, \nbut they had fallen on deaf ears as humanity plunged deeper into its pursuit of progress, blinded by its own hubris. \nAs the debris continued to accumulate, \nlike a silent army amassing in the heavens, the consequences became increasingly dire. \nCommunication networks faltered, weather forecasts grew unreliable, \nand navigation systems faltered, leaving the world vulnerable to unseen dangers lurking beyond the atmosphere. \nAnd then, one fateful day, the inevitable occurred. \nA collision of catastrophic proportions sent shockwaves rippling through space, \ntriggering a chain reaction that reverberated back to Earth with devastating force. \nSatellites fell from the sky like shooting stars, \nraining debris down upon cities and continents below.", -800, -250);
 
 }
 
@@ -86,7 +86,7 @@ function display3DModels() {
   for (let i = 0; i < stars.length; i++) {
     let star = stars[i];
     
-    // 3D 모델을 별의 위치에 배치하고 크기를 조절
+    // 3D 모델을 별의 위치에 배치하고 크기를 조절s
     push();
     translate(star.pos.x - width / 2, star.pos.y - height / 2, 0);
     rotateX(frameCount * 0.01);
