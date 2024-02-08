@@ -75,7 +75,7 @@ function draw() {
   }
 
   // 좌측 상단에 텍스트 추가
-  fill(240, 252, 3);
+  fill(46, 37, 37);
   textSize(20);
   textAlign(LEFT, TOP);
   text("Warning! \nThe proliferation of space debris poses a grave risk to Earth's biosphere, \nthreatening biodiversity and ecological balance. \nAs debris continues to accumulate in orbit, the potential for catastrophic collisions grows, jeopardizing \nnot only current space missions but also the delicate web of life that sustains us. \nFurthermore, the exponential increase in space debris amplifies the likelihood of cascading collisions, \ncreating a perilous environment for satellites crucial to global communication, \nweather forecasting, and navigation systems. The unchecked proliferation of debris \nnot only endangers human activities in space \nbut also threatens to exacerbate the already pressing issue of space sustainability.", -800, -250);
