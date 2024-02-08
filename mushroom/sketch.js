@@ -28,7 +28,7 @@ function preload() {
   font = loadFont('HomadeTrial.ttf');
   starModels = loadModel('mushroom.obj', true);
   starUV = loadImage('mushroomlow.jpg');
-  backgroundMusic = loadSound('ambience.mp3');
+  backgroundMusic = loadSound('street.mp3');
 }
 
 function setup() {
@@ -40,7 +40,7 @@ function setup() {
   textFont(font);
 
   backButton = createButton('Ignore');
-  backButton.position(40, 485);
+  backButton.position(40, 535);
   backButton.style('background-color', '#0a00bf'); 
   backButton.style('color', '#ff0051'); 
   backButton.style('font-family', 'HomadeTrial'); 
@@ -75,10 +75,10 @@ function draw() {
   }
 
   // 좌측 상단에 텍스트 추가
-  fill(240, 252, 3);
+  fill(47, 0, 201);
   textSize(20);
   textAlign(LEFT, TOP);
-  text("Space debris refers to the tiny particles or waste generated from space activities, \nranging from thousands to millions in number and varying in size from millimeters to meters. \nWhy should we pay attention to these debris?\nThey are not immediately visible nor do they seem threatening to us. \nHowever, such space debris poses significant threats not only to space activities and exploration but also to Earth's environment. \nDebris resulting from collisions may not disintegrate upon entering Earth's atmosphere \nand can remain as small fragments in the atmosphere. \nThis not only threatens spacecraft and satellites \nbut also affects Earth's atmospheric chemistry, potentially containing hazardous chemicals. \nMoreover, space debris can fall into the atmosphere or oceans, \nimpacting Earth's ecosystems.", -800, -250);
+  text("As the Galactic Debris Oversight Agency, entrusted with the solemn duty of safeguarding the celestial realm, \nwe stand resolute in our commitment to preserving the sanctity of space. \nOur agency, newly established to tackle the burgeoning crisis of space debris, \npledges unwavering vigilance and proactive measures to address this pressing concern. \nSpace debris, the remnants of bygone spacefaring endeavors, \nposes an imminent threat to the safety and sustainability of our cosmic domain. \nWith each passing moment, the density of debris orbiting our planet grows, \nheightening the risk of catastrophic collisions and jeopardizing vital space missions. \nUnder the banner of the Galactic Debris Oversight Agency, \nwe vow to marshal our collective expertise and resources to confront this challenge head-on. \nThrough rigorous monitoring, cutting-edge technologies, and international collaboration, \nwe will track the movements of debris, mitigate potential hazards, \nand safeguard the pathways to the stars. \nOur success depends not solely on our resolve, but on the collective efforts of all spacefaring nations and entities. \nLet us unite in purpose, transcending borders and ideologies, \nto ensure the safety and sustainability of space exploration for generations to come. \nTogether, as stewards of the cosmos, \nlet us forge a future where the heavens remain pristine and unspoiled, \nguided by the steadfast resolve of the Galactic Debris Oversight Agency.", -800, -400);
 
 }
 
