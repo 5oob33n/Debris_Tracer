@@ -28,7 +28,7 @@ function preload() {
   font = loadFont('HomadeTrial.ttf');
   starModels = loadModel('foil.obj', true);
   starUV = loadImage('foil.jpg');
-  backgroundMusic = loadSound('ambience.mp3');
+  backgroundMusic = loadSound('warning.mp3');
 }
 
 function setup() {
@@ -40,7 +40,7 @@ function setup() {
   textFont(font);
 
   backButton = createButton('Ignore');
-  backButton.position(40, 485);
+  backButton.position(40, 455);
   backButton.style('background-color', '#0a00bf'); 
   backButton.style('color', '#ff0051'); 
   backButton.style('font-family', 'HomadeTrial'); 
@@ -78,7 +78,7 @@ function draw() {
   fill(240, 252, 3);
   textSize(20);
   textAlign(LEFT, TOP);
-  text("Space debris refers to the tiny particles or waste generated from space activities, \nranging from thousands to millions in number and varying in size from millimeters to meters. \nWhy should we pay attention to these debris?\nThey are not immediately visible nor do they seem threatening to us. \nHowever, such space debris poses significant threats not only to space activities and exploration but also to Earth's environment. \nDebris resulting from collisions may not disintegrate upon entering Earth's atmosphere \nand can remain as small fragments in the atmosphere. \nThis not only threatens spacecraft and satellites \nbut also affects Earth's atmospheric chemistry, potentially containing hazardous chemicals. \nMoreover, space debris can fall into the atmosphere or oceans, \nimpacting Earth's ecosystems.", -800, -250);
+  text("Warning! \nThe proliferation of space debris poses a grave risk to Earth's biosphere, \nthreatening biodiversity and ecological balance. \nAs debris continues to accumulate in orbit, the potential for catastrophic collisions grows, jeopardizing \nnot only current space missions but also the delicate web of life that sustains us. \nFurthermore, the exponential increase in space debris amplifies the likelihood of cascading collisions, \ncreating a perilous environment for satellites crucial to global communication, \nweather forecasting, and navigation systems. The unchecked proliferation of debris \nnot only endangers human activities in space \nbut also threatens to exacerbate the already pressing issue of space sustainability.", -800, -250);
 
 }
 
