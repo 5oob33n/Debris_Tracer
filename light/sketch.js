@@ -28,7 +28,7 @@ function preload() {
   font = loadFont('HomadeTrial.ttf');
   starModels = loadModel('light.obj', true);
   starUV = loadImage('light.jpg');
-  backgroundMusic = loadSound('ambience.mp3');
+  backgroundMusic = loadSound('myth.mp3');
 }
 
 function setup() {
@@ -40,7 +40,7 @@ function setup() {
   textFont(font);
 
   backButton = createButton('Ignore');
-  backButton.position(40, 485);
+  backButton.position(40, 580);
   backButton.style('background-color', '#0a00bf'); 
   backButton.style('color', '#ff0051'); 
   backButton.style('font-family', 'HomadeTrial'); 
@@ -75,10 +75,10 @@ function draw() {
   }
 
   // 좌측 상단에 텍스트 추가
-  fill(240, 252, 3);
+  fill(255, 0, 81);
   textSize(20);
   textAlign(LEFT, TOP);
-  text("Space debris refers to the tiny particles or waste generated from space activities, \nranging from thousands to millions in number and varying in size from millimeters to meters. \nWhy should we pay attention to these debris?\nThey are not immediately visible nor do they seem threatening to us. \nHowever, such space debris poses significant threats not only to space activities and exploration but also to Earth's environment. \nDebris resulting from collisions may not disintegrate upon entering Earth's atmosphere \nand can remain as small fragments in the atmosphere. \nThis not only threatens spacecraft and satellites \nbut also affects Earth's atmospheric chemistry, potentially containing hazardous chemicals. \nMoreover, space debris can fall into the atmosphere or oceans, \nimpacting Earth's ecosystems.", -800, -250);
+  text("In the age of forgotten echoes, Earth's celestial realm bore witness to a transformation of cosmic proportions. \nLike a divine decree from the heavens above, the space debris encircling the planet coalesced into a radiant ring, \na testament to humanity's neglect and disregard for the sanctity of the cosmos. \nIt shimmered with a haunting beauty, an ethereal reminder of the hubris that had led to its creation. \nAs the heavens whispered tales of ancient gods \nand forgotten prophecies, mortals gazed upon the celestial band with awe and wonder. \nThey bestowed upon it a name fit for its celestial majesty, \ndubbing it the 'Ecliptic Halo,' a constellation born not of stars but of the remnants of human folly. \nUnbeknownst to them, each glimmering fragment held within it the echoes of past endeavors, \na silent testament to the dreams and aspirations of generations long gone. \nIn their ignorance, humanity chose to embrace the Ecliptic Halo \nas a new addition to the heavens above, a celestial adornment to be admired and revered. \nAnd so, amidst the tapestry of stars and constellations, \nthe Ecliptic Halo took its place, a shimmering reminder of the fragility of human ambition \nand the enduring legacy of cosmic neglect.", -800, -250);
 
 }
 
