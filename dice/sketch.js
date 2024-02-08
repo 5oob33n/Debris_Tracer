@@ -69,13 +69,13 @@ function draw() {
   background(0);
   let vol = mic.getLevel();
   
-  if (vol > 0.02) {
+  if (vol > 0.04) {
     display3DModels();
     drawLines();
   }
 
   // 좌측 상단에 텍스트 추가
-  fill(240, 252, 3);
+  fill(0, 42, 255);
   textSize(20);
   textAlign(LEFT, TOP);
   text("Space debris, a shadowy menace looming beyond Earth's atmosphere, threatens \nnot only our celestial endeavors but also the delicate balance of our planet's ecosystems. \nWith debris ranging from defunct satellites to discarded rocket stages, \nthe risk of collisions poses an ominous threat to the biodiversity and ecological stability of Earth. \nEach collision adds to the growing cloud of debris encircling our planet, \npotentially disrupting vital ecological processes and exacerbating climate crises. \nMoreover, the proliferation of space debris could trigger a domino effect, \nleading to cascading environmental damage that reverberates throughout our biosphere.", -800, -250);
