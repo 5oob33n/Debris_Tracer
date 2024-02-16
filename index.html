@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Space Debris</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @font-face {
+            font-family: 'Irregular'; 
+            src: url('font/IrregularPoster.woff2') format('woff2'), /* 모바일에서 널리 지원되는 WOFF2 포맷 */
+                 url('font/IrregularPoster.woff') format('woff'); /* 더 오래된 모바일 기기를 위한 WOFF 포맷 */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-image: url('/space.jpg'); 
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-family: 'Irregular', sans-serif; /* 폰트 적용 */
+        }
+
+        h1 {
+            font-size: 10vw; /* 뷰포트 너비에 따른 글자 크기 설정 */
+            color: transparent;
+            -webkit-text-stroke: 1px #f6ff00;
+            position: relative;
+        }
+
+        h1 a {
+            color: transparent;
+            -webkit-text-stroke: 1px #f6ff00;
+            text-decoration: none; 
+            position: relative; /* 링크의 위치를 상대적으로 지정 */
+            z-index: 1; /* 링크를 텍스트 위에 위치하도록 함 */
+            transition: color 0.3s ease; /* 색상 변화에 대한 전환 효과 추가 */
+        }
+
+        h1:hover a {
+            color: #f6ff00; /* 호버 상태일 때 링크의 색상을 노란색으로 변경 */
+        }
+
+        h1::before {
+            content: "Space-Debris";
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            overflow: hidden;
+            color: #f6ff00;
+            border-right: 1px solid #000000;
+            transition: 0.45s ease-in-out, color 0.3s ease, filter 0.1s ease; /* 빛나는 효과에 대한 전환 효과를 더 짧게 조정 */
+        }
+
+        h1:hover::before {
+            width: 100%;
+            filter: drop-shadow(0 0 30px #f6ff00);
+        }
+
+        audio {
+            display: none; /* 페이지 로드시 음악은 숨김 */
+        }
+
+        /* 모바일 환경 스타일 */
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 10vw; /* 뷰포트 너비에 따른 글자 크기 설정 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio id="backgroundMusic" loop autoplay controls>
+        <source src="debris.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    
+    <h1><a href="invisible.html">Space-Debris</a></h1>
+
+    <script>
+        var musicPlaying = false;
+
+        window.onload = function() {
+            var music = document.getElementById("backgroundMusic");
+            if (!music.paused) {
+                musicPlaying = true;
+            }
+        }
+
+        window.addEventListener('popstate', function(event) {
+            if (musicPlaying) {
+                toggleMusic(); // 음악 재생
+            }
+        });
+
+        function toggleMusic() {
+            var music = document.getElementById("backgroundMusic");
+
+            if (music.paused) {
+                music.play();
+                musicPlaying = true;
+            } else {
+                music.pause();
+                musicPlaying = false;
+            }
+        }
+    </script>
+</body>
+</html>
