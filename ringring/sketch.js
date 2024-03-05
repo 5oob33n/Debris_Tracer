@@ -46,7 +46,7 @@ function setup() {
   textFont(font);
 
   backButton = createButton('Ignore');
-  backButton.position(40, 485);
+  backButton.position(40, 495);
   backButton.style('background-color', 'transparent'); 
   backButton.style('border', '1px solid #3034ff'); 
   backButton.style('color', '#ff0051'); 
@@ -74,7 +74,7 @@ function setup() {
 }
 
 function toggleHelpPopup() {
-  helpVisible = !helpVisible; // 토글 기능을 구현하여 창을 보이게 하거나 숨깁니다.
+  helpVisible = !helpVisible; 
 }
 
 
@@ -99,26 +99,23 @@ function draw() {
     drawLines();
   }
 
-  // 좌측 상단에 텍스트 추가
   fill(240, 252, 3);
   textSize(20);
   textAlign(LEFT, TOP);
   text("Space debris refers to the tiny particles or waste generated from space activities, \nranging from thousands to millions in number and varying in size from millimeters to meters. \nWhy should we pay attention to these debris?\nThey are not immediately visible nor do they seem threatening to us. \nHowever, such space debris poses significant threats not only to space activities and exploration but also to Earth's environment. \nDebris resulting from collisions may not disintegrate upon entering Earth's atmosphere \nand can remain as small fragments in the atmosphere. \nThis not only threatens spacecraft and satellites \nbut also affects Earth's atmospheric chemistry, potentially containing hazardous chemicals. \nMoreover, space debris can fall into the atmosphere or oceans, \nimpacting Earth's ecosystems.", -800, -250);
 
   if (helpVisible) {
-    drawHelpPopup(); // helpVisible이 true일 때만 도움말 창을 그립니다.
+    drawHelpPopup(); 
   }
 }
 
 function drawHelpPopup() {
-  // 도움말 창을 그립니다.
   fill(255, 0, 111);
-  rect(320, -400, 500, 150); // 창의 위치와 크기를 설정합니다.
+  rect(320, -400, 500, 150); 
   fill(255);
   textSize(13);
   textAlign(LEFT, TOP);
   
-  // 두 번째 텍스트에만 폰트를 변경합니다.
   textFont(secondFont); 
   text("How to use \n\n1. Read the given text. \n2. Pay attention to the reactions while reading the text. How do you feel? \n3. Think about the meaning contained in the text. What do you think about it? \n4. If you want to reconsider or still don't know, choose ignore.", 340, -380, 560, 380); 
   
@@ -128,18 +125,18 @@ function drawHelpPopup() {
 
 
 function display3DModels(vol) {
-  // Damper 효과를 적용하여 현재 별의 크기를 조절
+
   let volumSize = map(vol, 0, 1, 0.01, 1.5); 
-  targetStarSize = stars[0].size * volumSize; // 별의 크기와 음향 크기를 곱하여 목표 크기 계산
+  targetStarSize = stars[0].size * volumSize; 
   
-  // Damper 효과를 적용하여 현재 별의 크기를 조절
+
   let deltaSize = targetStarSize - currentStarSize;
   currentStarSize += deltaSize * damping;
 
   for (let i = 0; i < stars.length; i++) {
     let star = stars[i];
     
-    if (currentStarSize > 0) { // 음향 입력이 있을 때만 별 표시
+    if (currentStarSize > 0) {
       push();
       translate(star.pos.x - width / 2, star.pos.y - height / 2, 0);
       rotateX(frameCount * 0.01);
