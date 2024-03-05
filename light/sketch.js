@@ -46,7 +46,7 @@ function setup() {
   textFont(font);
 
   backButton = createButton('Ignore');
-  backButton.position(40, 580);
+  backButton.position(40, 600);
   backButton.style('background-color', 'transparent'); 
   backButton.style('border', '1px solid #3034ff'); 
   backButton.style('color', '#ff0051'); 
